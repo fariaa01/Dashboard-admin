@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Checkbox } from "@/components/ui/checkbox" // <- CORRETO agora
+import { Checkbox } from "@/components/ui/checkbox"
 
 interface Props {
   onSubmit: (e: React.FormEvent) => void
@@ -23,10 +23,10 @@ export function RegisterForm({ onSubmit, onFlip }: Props) {
   const toggleVisibility = () => setIsVisible(!isVisible)
 
   const checkStrength = (pass: string) => [
-    { regex: /.{8,}/, text: "Pelo menos 8 caracteres" },
-    { regex: /[0-9]/, text: "Pelo menos 1 número" },
-    { regex: /[a-z]/, text: "Pelo menos 1 letra minúscula" },
-    { regex: /[A-Z]/, text: "Pelo menos 1 letra maiúscula" },
+    { regex: /.{8,}/, text: "At least 8 characters" },
+    { regex: /[0-9]/, text: "At least 1 number" },
+    { regex: /[a-z]/, text: "At least 1 lowercase letter" },
+    { regex: /[A-Z]/, text: "At least 1 uppercase letter" },
   ].map(req => ({
     met: req.regex.test(pass),
     text: req.text
@@ -45,32 +45,31 @@ export function RegisterForm({ onSubmit, onFlip }: Props) {
   }
 
   const getStrengthText = (score: number) => {
-    if (score === 0) return "Digite uma senha"
-    if (score <= 2) return "Senha fraca"
-    if (score === 3) return "Senha média"
-    return "Senha forte"
+    if (score === 0) return "Enter a password"
+    if (score <= 2) return "Weak password"
+    if (score === 3) return "Medium strength"
+    return "Strong password"
   }
 
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
-        <CardTitle>Cadastro</CardTitle>
-        <CardDescription>Crie uma nova conta para começar.</CardDescription>
+        <CardTitle>Sign Up</CardTitle>
+        <CardDescription>Create a new account to get started.</CardDescription>
       </CardHeader>
       <form onSubmit={onSubmit}>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="register-name">Nome completo</Label>
-            <Input id="register-name" type="text" placeholder="Seu nome" required />
+            <Label htmlFor="register-name">Full Name</Label>
+            <Input id="register-name" type="text" placeholder="Your name" required />
           </div>
           <div className="space-y-2">
             <Label htmlFor="register-email">Email</Label>
-            <Input id="register-email" type="email" placeholder="seu@email.com" required />
+            <Input id="register-email" type="email" placeholder="you@email.com" required />
           </div>
 
-          {/* Senha com validador */}
           <div className="space-y-2">
-            <Label htmlFor={id}>Senha</Label>
+            <Label htmlFor={id}>Password</Label>
             <div className="relative">
               <Input
                 id={id}
@@ -86,7 +85,7 @@ export function RegisterForm({ onSubmit, onFlip }: Props) {
                 type="button"
                 className="absolute right-0 top-0 h-full px-3 text-muted-foreground"
                 onClick={toggleVisibility}
-                aria-label={isVisible ? "Esconder senha" : "Mostrar senha"}
+                aria-label={isVisible ? "Hide password" : "Show password"}
               >
                 {isVisible ? <EyeOffIcon size={16} /> : <EyeIcon size={16} />}
               </button>
@@ -106,7 +105,7 @@ export function RegisterForm({ onSubmit, onFlip }: Props) {
             </div>
 
             <p id={`${id}-description`} className="text-sm font-medium text-foreground">
-              {getStrengthText(strengthScore)}. Deve conter:
+              {getStrengthText(strengthScore)}. Must include:
             </p>
 
             <ul className="space-y-1.5" aria-label="Password requirements">
@@ -125,7 +124,6 @@ export function RegisterForm({ onSubmit, onFlip }: Props) {
             </ul>
           </div>
 
-          {/* Termos com checkbox moderno */}
           <div className="flex items-center gap-2">
             <Checkbox id="terms" required />
             <Label htmlFor="terms" className="text-sm">
@@ -144,16 +142,16 @@ export function RegisterForm({ onSubmit, onFlip }: Props) {
 
         <CardFooter className="flex flex-col gap-4 pt-3">
           <Button type="submit" className="w-full">
-            Cadastrar
+            Register
           </Button>
           <p className="text-sm text-center w-full">
-            Já tem uma conta?{" "}
+            Already have an account?{" "}
             <button
               type="button"
               onClick={onFlip}
               className="text-blue-600 hover:underline font-medium"
             >
-              Fazer login
+              Log in
             </button>
           </p>
         </CardFooter>

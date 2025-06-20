@@ -1,5 +1,7 @@
 "use client"
 
+import { useRouter } from "next/navigation"
+import { useState } from "react"
 import { EyeIcon, EyeOffIcon } from "lucide-react"
 import {
   RiFacebookFill,
@@ -9,38 +11,68 @@ import {
 } from "@remixicon/react"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 interface Props {
-  onSubmit: (e: React.FormEvent) => void
   showPassword: boolean
   toggleShowPassword: () => void
   onFlip: () => void
 }
 
-export function LoginForm({ onSubmit, showPassword, toggleShowPassword, onFlip }: Props) {
+export function LoginForm({ showPassword, toggleShowPassword, onFlip }: Props) {
+  const router = useRouter()
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+
+    if (email === "admin@email.com" && password === "12345678") {
+      localStorage.setItem("auth", "true")
+      router.push("/dashboard")
+    } else {
+      alert("Invalid credentials")
+    }
+  }
+
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Login</CardTitle>
-        <CardDescription>Entre com suas credenciais para acessar sua conta.</CardDescription>
+        <CardDescription>Enter your credentials to access your account.</CardDescription>
       </CardHeader>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="login-email">Email</Label>
-            <Input id="login-email" type="email" placeholder="seu@email.com" required />
+            <Input
+              id="login-email"
+              type="email"
+              placeholder="you@email.com"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="login-password">Senha</Label>
+            <Label htmlFor="login-password">Password</Label>
             <div className="relative">
               <Input
                 id="login-password"
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
                 required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <Button
                 type="button"
@@ -56,21 +88,21 @@ export function LoginForm({ onSubmit, showPassword, toggleShowPassword, onFlip }
           <div className="flex items-center space-x-2">
             <input type="checkbox" id="remember" className="h-4 w-4 rounded border-gray-300" />
             <Label htmlFor="remember" className="text-sm font-normal">
-              Lembrar de mim
+              Remember me
             </Label>
-            <a href="#" className="ml-auto text-sm pb-5 nderline">
-              Esqueceu a senha?
+            <a href="#" className="ml-auto text-sm pb-5 underline">
+              Forgot password?
             </a>
           </div>
         </CardContent>
         <CardFooter className="flex flex-col gap-4">
           <Button type="submit" className="w-full">
-            Entrar
+            Sign In
           </Button>
 
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <div className="h-px flex-1 bg-border" />
-            ou continue com
+            or continue with
             <div className="h-px flex-1 bg-border" />
           </div>
 
@@ -78,7 +110,7 @@ export function LoginForm({ onSubmit, showPassword, toggleShowPassword, onFlip }
             <Button
               className="flex-1"
               variant="outline"
-              aria-label="Login com Google"
+              aria-label="Login with Google"
               size="icon"
             >
               <RiGoogleFill
@@ -90,7 +122,7 @@ export function LoginForm({ onSubmit, showPassword, toggleShowPassword, onFlip }
             <Button
               className="flex-1"
               variant="outline"
-              aria-label="Login com Facebook"
+              aria-label="Login with Facebook"
               size="icon"
             >
               <RiFacebookFill
@@ -102,7 +134,7 @@ export function LoginForm({ onSubmit, showPassword, toggleShowPassword, onFlip }
             <Button
               className="flex-1"
               variant="outline"
-              aria-label="Login com X"
+              aria-label="Login with X"
               size="icon"
             >
               <RiTwitterXFill
@@ -114,7 +146,7 @@ export function LoginForm({ onSubmit, showPassword, toggleShowPassword, onFlip }
             <Button
               className="flex-1"
               variant="outline"
-              aria-label="Login com GitHub"
+              aria-label="Login with GitHub"
               size="icon"
             >
               <RiGithubFill
@@ -126,13 +158,13 @@ export function LoginForm({ onSubmit, showPassword, toggleShowPassword, onFlip }
           </div>
 
           <p className="text-sm text-center w-full mt-2">
-            Não tem uma conta?{" "}
+            Don't have an account?{" "}
             <button
               type="button"
               onClick={onFlip}
               className="text-blue-600 hover:underline font-medium"
             >
-              Cadastre-se
+              Sign up
             </button>
           </p>
         </CardFooter>

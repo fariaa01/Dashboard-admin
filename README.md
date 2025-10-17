@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧭 Admin Dashboard – Next.js + TypeScript + Tailwind CSS
 
-## Getting Started
+![Preview do Login](.<img width="1920" height="919" alt="Create-Next-App-10-16-2025_10_45_PM" src="https://github.com/user-attachments/assets/e2f666a1-f296-4f2d-b800-8befe5414ebe" />/)
 
-First, run the development server:
+![Preview do Register](.<img width="1920" height="919" alt="Create-Next-App-10-16-2025_10_45_PM (1)" src="https://github.com/user-attachments/assets/789e9374-cdfc-4c42-8198-85eb24485550" />/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Preview do Dashboard](.<img width="1920" height="1404" alt="Create-Next-App-10-16-2025_10_44_PM" src="https://github.com/user-attachments/assets/3cc98b6e-fb59-420f-b005-72dcb7d1f3f2" />/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white&labelColor=0F172A)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&labelColor=0F172A)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white&labelColor=0F172A)](https://tailwindcss.com/)
+[![Shadcn/UI](https://img.shields.io/badge/Shadcn/UI-18181B?style=for-the-badge&logo=shadcnui&logoColor=white&labelColor=0F172A)](https://ui.shadcn.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Sobre o Projeto
 
-## Learn More
+Um **Dashboard Administrativo moderno e seguro**, desenvolvido com **Next.js**, **TypeScript** e **Tailwind CSS**.  
+O sistema conta com **autenticação completa (Login e Registro)** e um **painel administrativo** com métricas, gráficos e interface profissional.
 
-To learn more about Next.js, take a look at the following resources:
+💡 Ideal para sistemas de gestão, aplicações SaaS ou plataformas com controle administrativo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Principais Funcionalidades
 
-## Deploy on Vercel
+- 🔐 **Autenticação segura** (Login e Registro)  
+- 🧭 **Dashboard moderno** com cards de métricas e gráficos dinâmicos  
+- ⚙️ **Integração pronta com backend via API**  
+- 🧱 **Design limpo e responsivo**, com foco em UX/UI  
+- 🌙 **Tema escuro** e visual estilo SaaS profissional  
+- 📱 Totalmente adaptado para **mobile e desktop**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Tecnologias Utilizadas
+
+| Tecnologia       | Descrição                                               |
+|------------------|---------------------------------------------------------|
+| **Next.js**      | Framework React para SSR e rotas otimizadas             |
+| **TypeScript**   | Tipagem estática e segurança no desenvolvimento         |
+| **Tailwind CSS** | Framework utilitário para estilização moderna e ágil    |
+| **Shadcn/UI**    | Componentes acessíveis e elegantes para interfaces UI   |
+| **Recharts** *(opcional)* | Gráficos dinâmicos no painel (caso implementado) |
+
+---

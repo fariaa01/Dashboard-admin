@@ -15,9 +15,28 @@
 
 ## 🧭 Sobre o Projeto
 
-O **Admin Dashboard** é uma aplicação **Next.js full-stack** com **autenticação completa (login e registro)** e um **painel administrativo moderno**, desenvolvido com foco em **performance, usabilidade e design profissional**.
+O **Admin Dashboard** é uma aplicação **Next.js full-stack** com **autenticação completa (login e registro)** e um **painel administrativo moderno**, desenvolvida com foco em **performance, usabilidade e design profissional**.
 
 💡 Projetado para ser **a base de sistemas SaaS, plataformas de gestão e painéis administrativos**, com **arquitetura escalável**, **tema escuro elegante** e **componentes dinâmicos**.
+
+---
+
+## 📸 Preview das Telas
+
+### 🔐 Tela de Login
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e2f666a1-f296-4f2d-b800-8befe5414ebe" width="90%" alt="Preview Login"/>
+</p>
+
+### 📝 Tela de Registro
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/789e9374-cdfc-4c42-8198-85eb24485550" width="90%" alt="Preview Registro"/>
+</p>
+
+### 🧭 Dashboard Principal
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3cc98b6e-fb59-420f-b005-72dcb7d1f3f2" width="90%" alt="Preview Dashboard"/>
+</p>
 
 ---
 

@@ -1,8 +1,4 @@
-<h1 align="center">🚀 Admin Dashboard – Next.js + TypeScript + Tailwind CSS</h1>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/7cc3e109-1ce8-49a6-a2f2-9d57a7290bec" width="100%" alt="Preview do Projeto"/>
-</p>
+<h1 align="center">Admin Dashboard – Next.js + TypeScript + Tailwind CSS</h1>
 
 <p align="center">
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white&labelColor=0F172A" alt="Next.js"/></a>

@@ -1,14 +1,14 @@
-# 🧭 Admin Dashboard – Next.js + TypeScript + Tailwind CSS
+# Admin Dashboard – Next.js + TypeScript + Tailwind CSS
 
-## 📸 Preview das Telas
+## Preview das Telas
 
-### 🔐 Tela de Login
+### Tela de Login
 ![Preview do Login](https://github.com/user-attachments/assets/e2f666a1-f296-4f2d-b800-8befe5414ebe)
 
-### 📝 Tela de Registro
+### Tela de Registro
 ![Preview do Register](https://github.com/user-attachments/assets/789e9374-cdfc-4c42-8198-85eb24485550)
 
-### 🧭 Dashboard Principal
+### Dashboard Principal
 ![Preview do Dashboard](https://github.com/user-attachments/assets/3cc98b6e-fb59-420f-b005-72dcb7d1f3f2)
 
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 🚀 Sobre o Projeto
+## Sobre o Projeto
 
 Um **Dashboard Administrativo moderno e seguro**, desenvolvido com **Next.js**, **TypeScript** e **Tailwind CSS**.  
 O sistema conta com **autenticação completa (Login e Registro)** e um **painel administrativo** com métricas, gráficos e interface profissional.
